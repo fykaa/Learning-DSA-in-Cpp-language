@@ -1,4 +1,1 @@
-    for (int i = 1; i <q.size; i++)
-    {
-        printf("el at %d is %d\n", i , q.arr[i]);
-    }
+90, 0002, 31, 93, 33, 402

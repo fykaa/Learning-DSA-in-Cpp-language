@@ -34,7 +34,6 @@ struct Node* deleteAthead(struct Node* head){
 }
 
 
-
 int main()
 {
     struct Node* head;

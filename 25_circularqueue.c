@@ -1,7 +1,16 @@
-//CIRCULAR QUEUE
-    //here increment has to be not as a linear queue i.e. i = i+1; instead the increment will be like:
-    // i = (i+1)%size           
-        //i.e. if now i = 1 then next postion will be 
+/*CIRCULAR QUEUE
+    In linear queue Dequeuing leaves vacant spaces behind, hence space is not utilised efficiently and can't be reused!
+    In circular queues, we mainly focus on the point that we don’t increment our indices linearly. 
+    Linearly increasing indices cause the case of overflow when our index reaches the limit, which is size-1. 
+    In linear increment, i becomes i+1.
+    But in a circular increment ; i becomes (i+1)%size. 
+    This gives an upper cap to the maximum value making the index repeat itself
+
+    Linear Increment:   0,1,2,3,4,5,6,7,8,9,........
+    Circular Increment: 0,1,2,3,4,0,1,2,3,4,0...    //This allows the leftover spaces to be used again
+    (for size 5)
+
+    //i.e. if now i = 1 then next postion will be 
             // = (i+1)%size 
             // = (1+1)%6        (TAKING SIZE 6)
             // = 2%6 = 2  // matlab 1 ke baad 2...
@@ -15,6 +24,7 @@
             // (7+1)%6 = 2
 
 
+*/
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -27,7 +37,7 @@ struct circular_queue{
 };
 
 int isFull( struct circular_queue *q){
-    if ( (q->r+1)% q->size == q->f)
+    if ( (q->r+1)% q->size == q->f) //IMPORTANT :  == q->f NOT q->size-1
     {
         return 1;
     }

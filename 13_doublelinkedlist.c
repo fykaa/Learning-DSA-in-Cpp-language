@@ -7,7 +7,7 @@ NULL<--HEAD--><--NODE1--><--NODE2--><--NODE3--><--NODE4-->NULL
 (prev_node_pointer)(data)(next_node_pointer);
 */
 
-//CODE BY ME
+// //CODE BY ME
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -76,7 +76,7 @@ int main()
 
 
 //CODE BY ME
-    //IN THIS CODE I CONSIDERED THAT HEAD element SE PEHLE KOI NULL NAHI HAI!
+    //IN THIS CODE I (galti se) CONSIDERED THAT HEAD element SE PEHLE KOI NULL NAHI HAI!
     // i.e.    head--><--NODE1--><--NODE2-->NULL
 // #include<stdio.h>
 // #include<stdlib.h>
@@ -138,5 +138,3 @@ int main()
 //     doubleLinkedListTraversal(head);
 //     return 0;
 // }
-
-

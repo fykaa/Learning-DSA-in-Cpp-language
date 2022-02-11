@@ -1,4 +1,5 @@
 /*
+I studied Linked List from Code With Harry:
 https://codewithharry.com/videos/data-structures-and-algorithms-in-hindi-13/
 Introduction to Linked List in Data Structures (With Notes)
 Linked lists are the new data structure we'll explore today. The study of linked lists will certainly be detailed, but first, I would like to inform you about one of the fundamental differences between linked lists and arrays.  

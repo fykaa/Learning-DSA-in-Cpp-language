@@ -40,3 +40,33 @@
 //     printf("\n");
 //     return 0;
 // }
+
+
+//BY ME AFTER COMPLETING DSA syylabus while revising !! woohoo how fast of me!
+#include<stdio.h>
+#include<stdlib.h>
+
+void printArray(int *arr, int size){
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    } 
+    printf("\n");
+}
+
+int deletion(int *arr, int size, int index){
+    for (int i =index ; i <size-1 ; i++)
+    {
+        arr[i]= arr[i+1];
+    }
+}
+
+int main(){
+    int A[] = {112,23,234,23,12231,231232,326,6843,4};
+    int size = sizeof(A)/sizeof(int);
+    printArray(A, size);
+    deletion(A, size, 4);
+    size-=1;
+    printArray(A, size);
+    return 0;
+}

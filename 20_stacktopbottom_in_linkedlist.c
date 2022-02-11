@@ -1,24 +1,27 @@
 //Finding stack top and stack bottom LINKED LIST STACKS
 
-#include<stdio.h>
-#include<stdlib.h>
-struct Node {
+#include <stdio.h>
+#include <stdlib.h>
+struct Node
+{
     int data;
-    struct Node* next;
+    struct Node *next;
 };
 
-struct Node * top = NULL;       //SO WE'VE MADE top A GLOBAL VARIABLE!!!
+struct Node *top = NULL; //SO WE'VE MADE top A GLOBAL VARIABLE!!!
 
-void linkedlisttraversal(struct Node * ptr){
-    while (ptr!= NULL)
+void linkedlisttraversal(struct Node *ptr)
+{
+    while (ptr != NULL)
     {
-        printf("%d\n", ptr->data);
+        printf("%d ", ptr->data);
         ptr = ptr->next;
     }
-    
+    printf("\n");
 }
 
-int isEmpty(struct Node *top){
+int isEmpty(struct Node *top)
+{
     if (top == NULL)
     {
         return 1;
@@ -26,37 +29,40 @@ int isEmpty(struct Node *top){
     return 0;
 }
 
-int isFull(struct Node *top){
-    struct Node* n = (struct Node*)malloc(sizeof(struct Node));
+int isFull(struct Node *top)
+{
+    struct Node *n = (struct Node *)malloc(sizeof(struct Node));
     if (n == NULL)
     {
         return 1;
     }
     return 0;
-    
 }
 
-struct Node* push(struct Node* top, int data){
+struct Node *push(struct Node *top, int data)
+{
     if (isFull(top))
     {
         printf("Overflow\n");
     }
-    else{
-        struct Node * ptr = (struct Node *)malloc(sizeof(struct Node));
+    else
+    {
+        struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
         ptr->data = data;
         ptr->next = top;
         top = ptr;
         return top;
     }
-    
 }
 
-int pop(struct Node* tp){
+int pop(struct Node *tp)
+{
     if (isEmpty(tp))
     {
         printf("underflow\n");
     }
-    else{
+    else
+    {
         struct Node *n = tp;
         top = tp->next;
         int x = n->data;
@@ -65,42 +71,46 @@ int pop(struct Node* tp){
     }
 }
 
-int peek(struct Node * top, int peeking_posn){
-    struct Node * ptr = top;
-    for (int i = 0; i < peeking_posn-1 && ptr!=NULL ; i++)  
+int peek(struct Node *top, int peeking_posn)
+{
+    struct Node *ptr = top;
+    for (int i = 0; i < peeking_posn - 1 && ptr != NULL; i++)
     {
         ptr = ptr->next;
     }
 
     int x = ptr->data;
-    if (ptr!=NULL)
+    if (ptr != NULL)
     {
         return x;
     }
-    else{
-        return -1;      
+    else
+    {
+        return -1;
     }
 }
 
-int stackTop(struct Node * top){
+int stackTop(struct Node *top)
+{
     return top->data;
 }
 
-int stackBottom(struct Node * top){
-    struct Node *ptr = (struct Node*)malloc(sizeof(stackBottom));
+int stackBottom(struct Node *top)
+{
+    struct Node *ptr = (struct Node *)malloc(sizeof(stackBottom));
     ptr = top;
-    while (ptr->next!= NULL)
+    while (ptr->next != NULL)
     {
         ptr = ptr->next;
     }
-    //here ptr is pointing at last element 
+    //here ptr is pointing at last element
     int c = ptr->data;
     return c;
 }
 
 int main()
 {
-    
+
     top = push(top, 496);
     top = push(top, 123);
     top = push(top, 134);
@@ -108,8 +118,10 @@ int main()
     top = push(top, 785);
     top = push(top, 934);
     top = push(top, 345);
+    linkedlisttraversal(top);
     printf("lets pop %d \n", pop(top));
-    printf("peek at position %d will give %d\n", 3, peek(top, 2));
+    linkedlisttraversal(top);
+    printf("peek at position %d will give %d\n", 2, peek(top, 2));
     printf("stacktop is %d\n", stackTop(top));
     printf("stackBottom is %d\n", stackBottom(top));
 
@@ -118,5 +130,4 @@ int main()
     {
         printf("Value at position %d is %d\n", i, peek(top, i));
     }
-    
 }

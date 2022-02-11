@@ -14,8 +14,7 @@ void linkedlisttraversal(struct Node * ptr){
     {
         printf("%d\n", ptr->data);
         ptr = ptr->next;
-    }
-    
+    } 
 }
 
 int isEmpty(struct Node *top){
@@ -61,6 +60,11 @@ int pop(struct Node* tp){
         top = tp->next;
         int x = n->data;
         free(n);
+        //ARRAY mein hame element ko FREE karne ki zarurat nahi hoti thi!
+            // kyuki aap use refer hi nahi karrahe ho toh vo automatically removed hai
+            //so that ptr->top is not referring last element , its no more the part of the array!!!
+        //BUT in LINKED LIST you must FREE the element to be removed 
+            //because it has occupied memory in some location irrespective of you changing pointers
         return x;
     }
 }

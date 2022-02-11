@@ -2,8 +2,25 @@
 QUEUE - Insertion from Rear & Deletion from Front
 DE Queue - Insertion from Rear OR Front SIDE / Deletion from Rear or Front SIDE !
 
-Operations of DE QUEUE :
+We had certain characteristics in normal queues, which I would like to summarize here:
+1.A queue is very similar to the real-life queue, where you stand in the last and wait for your turn.
+2.Similarly, the elements get inserted from one end and exit from the other. 
+3.We had two pointers cum index variables to maintain the two ends of this queue.
+4.We followed the FIFO principle throughout the lectures.
 
+And now, in DEQueue, we don’t follow the FIFO principle. As the name suggests, this variant of the queue is double-ended. 
+This means that unlike normal queues where insertion could only happen at the rear end, and deletion at the front end, 
+these double-ended queues have the freedom to insert and delete elements from the end of their choice.
+
+
+Double-ended queues, hence, have the following characteristics:
+They don't follow the FIFO discipline.
+Insertion can be done at both the ends of the queue.
+Deletion can also be done from both ends of the queue.
+You would assume the implementation part of double-ended queues to be on the tough side, but believe me, it is straightforward to consume. 
+I’ll use illustrations to make you understand things better.
+
+Operations of DE QUEUE :
 isempty
 isfull
 peek
@@ -14,13 +31,13 @@ dequeueread()
 
 Types of DE QUEUE :
 1. Restricted Input DE Queue- insertion at front is not allowed
-2. Restricted Output DE Queue- deletion read not allowed
+2. Restricted Output DE Queue- deletion rear not allowed
 
 */
 
 
 // this code is totally written by me
-        //here i am facing a problem in :
+        //here i am facing a problem ONLY in printing the element dequeued at rear, vo value nahi bata paa raha\other wise all good :
 
 #include<stdio.h>
 #include<stdlib.h>
