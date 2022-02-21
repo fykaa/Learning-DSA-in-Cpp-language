@@ -101,7 +101,7 @@ And this is what the Bubble Sort algorithm looks like. We have a few things to c
 Time Complexity-    O(n^2)
 Space Complexity-   
 Stability-          Stable
-Adaptivity-         Not Adaptive
+Adaptivity-         Not Adaptive, (can be made adaptive by a simple change)
 Recursiveness-      Not Recursive
 
 Size = n

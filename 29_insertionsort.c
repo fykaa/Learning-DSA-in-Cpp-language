@@ -110,7 +110,7 @@ void insertionSort(int *arr, int size)
             arr[j + 1] = arr[j]; // You have to Change the element at J+1 (not at i) kyuki here one shift sorting horahi hai
             j--;
         }
-        arr[j + 1] = key;
+        arr[j + 1] = key;       //so with every pass key will be shifted to its correct position!
     }
 }
 

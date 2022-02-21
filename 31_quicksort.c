@@ -32,7 +32,7 @@ partition algorithm we must adhere to. We always start from step 1 with each fre
 3) Increase i by 1 until you reach an element greater than the pivot element.
 4) Decrease j by 1 until you reach an element smaller than or equal to the pivot element.
 5) Having fixed the values of i and j, interchange the elements at indices i and j.
-6) Repeat steps 3, 4, and 5 until j becomes less than or equal to i.
+6) Repeat steps 3, 4, and 5 until j becomes less than\|w i.
 7) Finally, swap the pivot element and the element at the index j.
 
 This was the partitioning algorithm. Every time you call a partition, the pivot element gets its final position. 

@@ -22,7 +22,8 @@ array = 8 0 7 1 3
 size of array = 5
 
 1st Pass:
-At first pass, our whole array comes under the unsorted part. We will start by assuming 0 as the min index. Now, we’ll have to check among the remaining 4 elements if there is still a lesser element than the first one.
+At first pass, our whole array comes under the unsorted part. We will start by assuming 0 as the min index.
+ Now, we’ll have to check among the remaining 4 elements if there is still a lesser element than the first one.
 And when we compared the element at min index with the element at index 1, we found that 0 is less than 8 and hence we update our min index to 1.
 And now we keep checking with the updated min. Since 7 is not less than 0, we move ahead.
 And now we compared the elements at index 1 and 3, and 0 is still lesser than 1, so we move ahead without making any changes.
